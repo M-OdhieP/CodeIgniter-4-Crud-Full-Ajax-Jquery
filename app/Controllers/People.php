@@ -27,8 +27,8 @@ class People extends BaseController
         foreach ($peoples as $key => $value) {
 
             $ops = '<div class="btn-group">';
-            $ops .= '<a class="btn btn-sm btn-primary" role="button"  onClick="edit(' . $value->id . ')">Edit </a>';
-            $ops .= '<a class="btn btn-sm btn-danger" role="button" onClick="remove(' . $value->id . ')">Delete</a>';
+            $ops .= '<a class="btn btn-sm btn-primary" role="button"  onClick="edit(' . $value->id . ')"  data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="bi bi-pencil-square"></i> </a>';
+            $ops .= '<a class="btn btn-sm btn-danger" role="button" onClick="remove(' . $value->id . ')"  data-bs-toggle="tooltip" data-bs-placement="top" title="Hapus"><i class="bi bi-trash-fill"></i></a>';
             $ops .= '</div>';
 
 

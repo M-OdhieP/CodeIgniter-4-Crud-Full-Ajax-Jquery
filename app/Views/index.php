@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>CodeIgniter 4 Crud Full Ajax Jquery</title>
     <link rel="stylesheet" href="<?= base_url("assets/dist/css/bootstrap.min.css") ?>">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="shortcut icon" href="<?= base_url("favicon.ico") ?>" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -84,8 +86,6 @@
             </div>
         </div>
     </div>
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="<?= base_url("assets/dist/js/bootstrap.bundle.min.js") ?>"></script>
@@ -95,9 +95,12 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         $(document).ready(function() {
             $('#data_table').DataTable({
                 ajax: '<?= base_url('findAll') ?>',
+
             });
 
         });
